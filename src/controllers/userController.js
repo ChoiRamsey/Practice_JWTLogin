@@ -31,17 +31,7 @@ const signIn = catchAsync(async(req, res) => {
   res.status(201).json({ message : "LOGIN_SUCCESS!", accessToken })
 })
 
-const redirectTest = catchAsync(async(req, res) => {
-  res.redirect('/users/ping');
-});
-
-const pingpongTest = catchAsync(async(req, res) => {
-  res.status(200).json({ message : "pong" });
-});
-
 module.exports = {
   signUp,
-  signIn,
-  pingpongTest,
-  redirectTest
+  signIn
 }
